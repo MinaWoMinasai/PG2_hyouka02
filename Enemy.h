@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "Struct.h"
 
 class Enemy
@@ -6,23 +6,23 @@ class Enemy
 
 public:
 
-	// ‰Šú‰»
+	// åˆæœŸåŒ–
 	void Initialization();
 
-	// ƒQƒbƒ^[
+	// ã‚²ãƒƒã‚¿ãƒ¼
 	Vector2<float> GetPos() { return enemy_.pos; }
 	Vector2<float> GetVelocity() { return enemy_.velocity; }
 	Vector2<float> GetRadius() { return enemy_.radius; }
 	Actor GetEnemy() { return enemy_; }
 	int GetIsAlive() { return enemy_.isAlive; }
 
-	// ‚ ‚½‚è”»’è
+	// ã‚ãŸã‚Šåˆ¤å®š
 	void HitAction();
 
-	// XVˆ—
+	// æ›´æ–°å‡¦ç†
 	void Update();
 
-	// •`‰æˆ—
+	// æç”»å‡¦ç†
 	void Draw();
 
 private:
