@@ -6,19 +6,23 @@ class Enemy
 
 public:
 
+	// 初期化
 	void Initialization();
 
+	// ゲッター
 	Vector2<float> GetPos() { return enemy_.pos; }
 	Vector2<float> GetVelocity() { return enemy_.velocity; }
 	Vector2<float> GetRadius() { return enemy_.radius; }
-
 	Actor GetEnemy() { return enemy_; }
 	int GetIsAlive() { return enemy_.isAlive; }
 
+	// あたり判定
 	void HitAction();
 
+	// 更新処理
 	void Update();
 
+	// 描画処理
 	void Draw();
 
 private:

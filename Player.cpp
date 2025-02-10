@@ -5,39 +5,35 @@ Player::Player() {
 
 	player_ = kPlayer;
 	bullet = new Bullet;
-	
+
 }
 
 Player::~Player() {
 
-	
-		delete bullet;
-	
+
+	delete bullet;
+
 
 }
 
-
 void Player::Initialization() {
-	
+
 	player_ = kPlayer;
 
 }
 
 Actor Player::GetBullet() {
 
-		bullet_ = bullet->GetBullet();
-		return bullet_;
+	bullet_ = bullet->GetBullet();
+	return bullet_;
 }
-
-	
-
 
 int Player::GetBulletIsAlive() {
 
-	
-		bulletIsAlive_ = bullet->GetIsAlive();
-		return bulletIsAlive_;
-	
+
+	bulletIsAlive_ = bullet->GetIsAlive();
+	return bulletIsAlive_;
+
 }
 
 void Player::Update(const char(keys)[], const char(preKeys)[]) {
@@ -74,8 +70,6 @@ void Player::Update(const char(keys)[], const char(preKeys)[]) {
 	if (bullet->GetIsAlive()) {
 		bullet->Update();
 	}
-	
-
 
 }
 
@@ -92,7 +86,7 @@ void Player::Draw() {
 	if (bullet->GetIsAlive()) {
 		bullet->Draw();
 	}
-	
+
 
 	// 自機の描画
 	Novice::DrawEllipse(
